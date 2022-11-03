@@ -8,6 +8,7 @@ import { UserContext } from "../../../../context/user-context"
 
 
 const EditPetPage = (props) => {
+    const userCtx = useContext(UserContext)
     const router = useRouter()
     async function editPetHandler(enteredData){
         console.log(enteredData)
@@ -32,8 +33,6 @@ const EditPetPage = (props) => {
         </>
         )
     }
-
-    const userCtx = useContext(UserContext)
 
     return <>
     <Head>

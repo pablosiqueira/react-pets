@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { UserContext } from '../../../context/user-context'
 import { ObjectId, MongoClient } from "mongodb"
+import PetList from '../../../components/PetList/PetList'
 
 const MyPetsPage = () => {
     const userCtx = useContext(UserContext)
