@@ -1,0 +1,51 @@
+.newPetTitle{
+    background-color: #9E0059;
+    color: #CCAD8F;
+    font-family: 'Lobster', cursive;
+}
+
+.newPetBody{
+    /*max-width: 1000px;*/
+    /*background-color: #CCAD8F;*/
+    /*background-image: url('/running.jpg');*/
+    background-repeat: round;
+}
+
+.newPetImg{
+    object-fit: contain;
+    max-height: 7rem;
+    width: 10rem;
+}
+
+.newPetCardBody{
+    align-items: center;
+    width: 450px;
+    background-color: #9E0059;
+    justify-content: space-around;
+    cursor: pointer;
+    border-color: #262626;
+    /*font-family: 'Bebas Neue', cursive;*/
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.newPetCardBody:hover{
+    background-color: #262626;
+}
+
+.newPetCardText{
+    color: #CCAD8F;
+    font-weight: bold;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+.newPetCardText p{
+    margin-bottom: .2rem;
+}

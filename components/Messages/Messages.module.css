@@ -1,0 +1,9 @@
+.text{
+    max-width: 1000px;
+    display: block;
+    margin-inline:auto;
+}
+
+.messageList{
+    cursor: pointer;
+}

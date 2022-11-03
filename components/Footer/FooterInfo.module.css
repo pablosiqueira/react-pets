@@ -1,0 +1,81 @@
+.footer{
+    bottom: 0;
+    width: 100%;
+    background-color: #CCAD8F;
+}
+
+.flexDirection{
+    flex-direction: column;
+}
+
+.description, .contact,.footerlinks li button, .footerlinks li a{
+    color: #262626;
+}
+
+
+.description{
+  min-width: 200px;
+}
+
+.about{
+  max-width: 600px;
+}
+
+.about p{
+  text-align: justify;
+}
+
+.contact{
+    max-width: fit-content;
+}
+
+.contact h6{
+    margin-left: .75rem;
+}
+
+.about{
+  margin-inline: 1rem;
+}
+
+.footerlinks
+{
+  padding-left:0;
+  list-style:none
+}
+
+.copyright
+{
+  border-top: #262626 1px solid;
+  text-align: center;
+  color:#CCAD8F ;
+  background-color: #9E0059;
+}
+
+.footerlinks a, .footerlinks button{
+  border-color: transparent;
+}
+
+.btnNone{
+    cursor: initial!important;
+}
+
+.btnNone:hover{
+    background-color: transparent!important;
+    border-color: transparent!important;
+    color: #262626!important;
+}
+
+.about h5, .contact h5{
+  font-family: 'Lobster', cursive;
+}
+
+.about p, .contact ul, .copyright{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+@media (max-width:600px)
+{
+  .aboutContact{
+    flex-direction: column;
+  }
+}

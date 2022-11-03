@@ -1,0 +1,95 @@
+.topbar, .ctgbar{
+    color: #D3C4E3;
+    /*font-family: 'Alkalami', serif;*/
+}
+
+.topbar{
+    background-color: #9E0059;
+}
+
+.topbar button, .topbar span{
+  text-decoration: none;
+  color:#CCAD8F;
+}
+
+.topbar button:hover, .topbar span:hover{
+    cursor: pointer;
+    color:#FFC07F;
+    text-decoration: none;
+}
+
+.topbar a{
+  /*color:#CCAD8F;*/
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.loginLink{
+  color:#CCAD8F;
+  font-weight: bold;
+}
+
+.ctgbar{
+    background-color: #D3C4E3;
+    justify-content: center;
+    /*font-size: large;*/
+  }
+
+  .ctglink{
+    color: #9E0059;
+    text-decoration: none;
+    background-color: transparent!important;
+  }
+
+  .ctglink:active, .ctglink:focus{
+    color: #9E0059;
+  }
+
+  .ctglink:focus-visible{
+    outline: none;
+  }
+  
+  .ctglink:hover{
+    color: #7EA3CC;
+  }
+
+  .ctglinkDark{
+    color: #262626;
+  }
+
+  .ctglinkDark:hover{
+    color: #9E0059;
+  }
+
+  .actionsSection{
+    background-color: #D3C4E3;
+    justify-content: space-evenly;
+}
+
+.actionLink{
+    text-decoration: none;
+    color: #262626;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-inline: .5rem;
+}
+
+.actionLink:hover{
+    color: #9E0059;
+}
+
+.fontRoboto, .actionsSection{
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.bottomDiv{
+  width: 100%;
+  background-color: #D3C4E3;
+}
+
+.bottomDiv img{
+  max-height: 200px;
+  object-fit: scale-down;
+  max-width: 100%;
+}

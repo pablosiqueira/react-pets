@@ -1,0 +1,20 @@
+.orderItemTitle{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.itemImage{
+    height: 5rem;
+    width: 5rem;
+    object-fit: contain;
+    cursor: pointer;
+    margin-inline: 1rem;
+}
+
+.fontRoboto{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
