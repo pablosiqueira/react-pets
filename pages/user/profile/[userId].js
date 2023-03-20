@@ -21,7 +21,7 @@ export async function getServerSideProps(context){
             notFound:true
         }
     }
-  const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/pets?retryWrites=true&w=majority')
+  const client = await MongoClient.connect(process.env.MONGODB_URI)
   const db = client.db()
   const usersCollection = db.collection('users')
   const selectedUser = await usersCollection.findOne({_id: new ObjectId(userId)})

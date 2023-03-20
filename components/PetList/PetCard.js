@@ -14,8 +14,9 @@ const PetCard = props => {
     let addedAt = new Date(props.pet.date)
     const ageDif = Math.ceil((dateNow - addedAt) / (1000 * 3600 * 24)) //in days
     let ageToShow
+
     if (ageDif > 30){
-        ageToShow = addedAt.toLocaleDateString()
+        ageToShow = addedAt
     }else{
         ageToShow = ageDif + ' days ago'
     }
@@ -24,7 +25,7 @@ const PetCard = props => {
         <Link href={linkHref}>
             <Col className={classes.pointer}>
                 <Card className={classes.prodCard}>
-                    <Card.Img variant="top" src={imgError ? '/img_not_found.png' : props.pet.image} className={classes.prodImg}
+                    <Card.Img variant="top" src={imgError ? './img_not_found.png' : props.pet.image} className={classes.prodImg}
                     onError={()=>setImgError(true)}/>
                     <Card.Body className='text-center'>
                         <Card.Title className={classes.cardTitle}>
@@ -38,7 +39,7 @@ const PetCard = props => {
                             {props.mode === 'show' && <span>{props.pet.city}/{props.pet.state} - {props.pet.country}</span>}
                             {props.mode === 'edit' && <FaRegEdit size='1.5rem' className='mb-3'/>}
                         </Card.Text>
-                        <Card.Footer className={"text-muted " + classes.cardFooter}>Added: {ageToShow}</Card.Footer>
+                        <Card.Footer className={"text-muted " + classes.cardFooter}>Added: {ageDif} days ago</Card.Footer>
                     </Card.Body>
                     
                 </Card>

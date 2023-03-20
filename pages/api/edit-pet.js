@@ -8,7 +8,7 @@ export async function EditPet(req,res){
         let petData = req.body;
         petData.age.number = parseFloat(petData.age.number)
         //console.log(req.body)
-        const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/pets?retryWrites=true&w=majority')
+        const client = await MongoClient.connect(process.env.MONGODB_URI)
         const db = client.db()
         const petsCollection = db.collection('pets')
         const result = await petsCollection.updateOne({_id:petId},{$set: petData})

@@ -16,7 +16,7 @@ const PetsPage = (props) => {
 
 export async function getServerSideProps({params, query}){
   console.log(query)
-  const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/pets?retryWrites=true&w=majority')
+  const client = await MongoClient.connect(process.env.MONGODB_URI)
   const db = client.db()
   const petsCollection = db.collection('pets')
   let searchTerms = {}
@@ -98,7 +98,7 @@ export async function getServerSideProps({params, query}){
                 city: selectedPet.address.city,
                 state: selectedPet.address.state,
                 country: selectedPet.address.country,
-                date: selectedPet.date,
+                date: selectedPet.date.toString(),
                 description: selectedPet.description
     })
   })

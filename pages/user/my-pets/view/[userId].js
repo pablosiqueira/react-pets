@@ -24,7 +24,7 @@ const MyPetsPage = (props) => {
 
 export async function getStaticPaths(context){
     //fetch data for a single meetup
-    const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/pets?retryWrites=true&w=majority')
+    const client = await MongoClient.connect(process.env.MONGODB_URI)
     const db = client.db()
     const petsCollection = db.collection('users')
     const users = await petsCollection.find({},{_id: 1}).toArray()
@@ -46,7 +46,7 @@ export async function getStaticProps({params,query}){
             notFound:true
         }
     }
-    const client = await MongoClient.connect('mongodb+srv://pablo:R5zA29LqqGhAM2Hm@cluster0.1gr6w.mongodb.net/pets?retryWrites=true&w=majority')
+    const client = await MongoClient.connect(process.env.MONGODB_URI)
     const db = client.db()
     const petsCollection = db.collection('pets')
 

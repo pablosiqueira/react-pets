@@ -4,12 +4,13 @@
 }
 
 .topbar{
-    background-color: #9E0059;
+    background-color: rgba(67, 6, 6, 1);
+    ;
 }
 
 .topbar button, .topbar span{
   text-decoration: none;
-  color:#CCAD8F;
+  color:#FFFF;
 }
 
 .topbar button:hover, .topbar span:hover{

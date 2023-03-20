@@ -18,7 +18,7 @@ const PetDetails = (props) => {
 
         <div className='d-flex justify-content-center flex-wrap mb-4'>
             <div className='my-2 mx-2'>
-                <Image src={imgError ? '/img_not_found.png' : props.pet.image} fluid style={{maxHeight: '15rem'}} 
+                <Image src={imgError ? './pets.png' : props.pet.image} fluid style={{maxHeight: '15rem'}} 
                 onError={()=>setImgError(true)} alt={props.pet.name}/>
             </div>
             <div className={classes.description}>
