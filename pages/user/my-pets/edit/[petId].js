@@ -45,7 +45,7 @@ const EditPetPage = (props) => {
 }
 
 export async function getStaticPaths(context){
-    const client = await MongoClient.connect(process.env.MONGODB_URI)
+    const client = await MongoClient.connect(process.env.MONGODB_PETS_URI)
     const db = client.db()
     const petsCollection = db.collection('pets')
     const pets = await petsCollection.find({},{_id: 1}).toArray()
@@ -62,7 +62,7 @@ export async function getStaticPaths(context){
 
 export async function getStaticProps(context){
     const petId = context.params.petId
-    const client = await MongoClient.connect(process.env.MONGODB_URI)
+    const client = await MongoClient.connect(process.env.MONGODB_PETS_URI)
     const db = client.db()
     const petsCollection = db.collection('pets')
     const selectedPet = await petsCollection.findOne({_id: ObjectId(petId)})

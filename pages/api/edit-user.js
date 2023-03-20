@@ -5,7 +5,7 @@ export async function editUser(req,res){
         const userData = req.body;
         const userId = new ObjectId(req.query.id)
         console.log(userData)
-        const client = await MongoClient.connect(process.env.MONGODB_URI)
+        const client = await MongoClient.connect(process.env.MONGODB_PETS_URI)
         const db = client.db()
         const usersCollection = db.collection('users')
         let message

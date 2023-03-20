@@ -5,7 +5,7 @@ export async function login(req,res){
         const data = req.body
         const email = data.email
         const password = data.password
-        const client = await MongoClient.connect(process.env.MONGODB_URI)
+        const client = await MongoClient.connect(process.env.MONGODB_PETS_URI)
         const db = client.db()
         let userCollection
         let message

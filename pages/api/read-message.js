@@ -4,7 +4,7 @@ export async function readMessage(req,res){
         console.log('read message')
         let messageData = req.body
         console.log(req.body)
-        const client = await MongoClient.connect(process.env.MONGODB_URI)
+        const client = await MongoClient.connect(process.env.MONGODB_PETS_URI)
         const db = client.db()
         const messagesCollection = db.collection('messages')
         const getMessage = await messagesCollection.findOne({_id: new ObjectId(messageData.id)})

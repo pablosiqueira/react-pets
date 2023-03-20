@@ -16,7 +16,7 @@ const PetsPage = (props) => {
 
 export async function getServerSideProps({params, query}){
   console.log(query)
-  const client = await MongoClient.connect(process.env.MONGODB_URI)
+  const client = await MongoClient.connect(process.env.MONGODB_PETS_URI)
   const db = client.db()
   const petsCollection = db.collection('pets')
   let searchTerms = {}

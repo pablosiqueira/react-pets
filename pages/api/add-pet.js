@@ -5,7 +5,7 @@ export async function addPet(req,res){
         let petData = req.body
         petData.age.number = parseFloat(petData.age.number)
         const userId = new ObjectId(petData.user)
-        const client = await MongoClient.connect(process.env.MONGODB_URI)
+        const client = await MongoClient.connect(process.env.MONGODB_PETS_URI)
         const db = client.db()
         const petsCollection = db.collection('pets')
         const usersCollection = db.collection('users')

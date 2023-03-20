@@ -4,7 +4,7 @@ export async function createUser(req,res){
         console.log('adding')
         const userData = req.body;
         console.log(userData)
-        const client = await MongoClient.connect(process.env.MONGODB_URI)
+        const client = await MongoClient.connect(process.env.MONGODB_PETS_URI)
         const db = client.db()
         const usersCollection = db.collection('users')
         const checkUser = await usersCollection.findOne({email: userData.email})

@@ -16,7 +16,7 @@ const Home = (props) => {
 }
 
 export async function getServerSideProps(context){
-  const client = await MongoClient.connect(process.env.MONGODB_URI)
+  const client = await MongoClient.connect(process.env.MONGODB_PETS_URI)
   const db = client.db()
   const petsCollection = db.collection('pets')
   const selectedPets = await petsCollection.find().limit(6).sort({'date':-1}).toArray()
